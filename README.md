@@ -56,28 +56,20 @@ Developed by: PREM NATH D
 RegisterNumber: 212225230217
 ```
 ```
-i)FULL ADDER
+ i) FULL ADDER
+ module Fulladder(a,b,c,sum,carry);
+ input a,b,c;
+ output sum,carry;
+ xor(sum,a,b,c);
+ assign carry=a&b | b&c | a&c;
+ endmodule
 
-module funct1(a,b,c,d,f1);
-
-input a,b,c,d;
-
-output f1;
-
-assign f1=((~b & ~d)|(~a & b & d)|(a & b & ~c));
-
-endmodule
-
-ii)FULL SUBTRACTOR
-
-module funct2(w,x,y,z,f2);
-
-input w,x,y,z;
-
-output f2;
-
-assign f2=((~y & z)|( w & y )|(x & y));
-
+ ii)FULL SUBTRACTOR
+ module Fullsubtractor(diff,borrow,a,b,c);
+input a,b,c;
+output diff,borrow;
+xor(diff,a,b,c);
+assign borrow= (~a)&c | (~a)&b | (b&c);
 endmodule
 ```
 
@@ -85,22 +77,23 @@ endmodule
 
 i) FULL ADDER
 
-<img width="1042" height="457" alt="image" src="https://github.com/user-attachments/assets/238e2726-353b-4a05-bb20-d53af035c9d6" />
+<img width="1918" height="1199" alt="image" src="https://github.com/user-attachments/assets/6faa46cd-ed99-4fd1-84cb-8fde6fe55060" />
+
 
 ii)FULL SUBTRACTOR
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9c6f603d-1d63-4e8e-aaf1-e7a00c56f7e9" />
+<img width="1918" height="1199" alt="image" src="https://github.com/user-attachments/assets/18179d67-a9b5-4419-bc8b-a9fac4ab0e84" />
 
 
 **Output Timing Waveform**
 
 i)FULL ADDER
 
-<img width="1629" height="400" alt="image" src="https://github.com/user-attachments/assets/f171437a-ad73-494e-8fdf-d6691cc6d320" />
+<img width="1919" height="1197" alt="image" src="https://github.com/user-attachments/assets/96688d7d-82b0-4d96-94fd-1e4ceb4edb80" />
 
 ii)FULL SUBTRACTOR
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/22ced8f2-a894-46b5-9c5d-c13b227673b5" />
+<img width="1919" height="1198" alt="image" src="https://github.com/user-attachments/assets/25453d44-ab21-40db-9256-3e4bad27122e" />
 
 
 **Result:**
